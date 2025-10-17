@@ -17,7 +17,7 @@ pipeline {
 
         stage('Build the docker image'){
             steps{
-                sh 'docker build -t go-app:prod_$BUILD_NUMBER .'
+                sh 'docker build -t go-app:production_$BUILD_NUMBER .'
             }
         }
 
