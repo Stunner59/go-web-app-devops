@@ -24,10 +24,10 @@ pipeline {
         stage('Run the Image'){
             steps{
                 sh '''
-                container_id=$(docker ps --filter ancestor=go-app:$((BUILD_NUMBER-1)) | awk 'NR==2 { print $1 }') || true
-                docker rm -f $container_id || true
-                docker rmi go-app:$((BUILD_NUMBER-1)) || true
-                docker run -d -p 8050:8050 go-app:$BUILD_NUMBER
+                // container_id=$(docker ps --filter ancestor=go-app:$((BUILD_NUMBER-1)) | awk 'NR==2 { print $1 }') || true
+                // docker rm -f $container_id || true
+                // docker rmi go-app:$((BUILD_NUMBER-1)) || true
+                docker run -d -p 8050:8050 go-app:production_$BUILD_NUMBER
                 '''
             }
         }
