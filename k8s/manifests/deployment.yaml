@@ -19,4 +19,4 @@ spec:
       - name: go-web-app
         image: stunner59/go-app:32
         ports:
-        - containerPort: 8080
+        - containerPort: 8050
