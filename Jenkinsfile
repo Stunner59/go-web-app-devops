@@ -6,6 +6,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 git url: 'https://github.com/Stunner59/go-web-app-devops.git', branch: 'main'
+                sh " echo branchName = ${env.BRANCH_NAME}"
             }
         }
 
