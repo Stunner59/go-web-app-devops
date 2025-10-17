@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Get some code from a GitHub repository
-                git url: 'https://github.com/Stunner59/go-web-app-devops.git', branch: 'main'
+                git url: 'https://github.com/Stunner59/go-web-app-devops.git', branch: 'stage'
             }
         }
 
