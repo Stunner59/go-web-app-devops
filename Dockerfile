@@ -31,7 +31,7 @@ COPY --from=base /app/main .
 COPY --from=base /app/static ./static
 
 # Expose the port on which the application will run
-EXPOSE 8050
+EXPOSE 8030
 
 # Command to run the application
 CMD ["./main"]
